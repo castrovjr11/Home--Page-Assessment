@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marci Metzger Homes</title>
+  <meta name="description" content="Discover your dream home with Marci Metzger and The Ridge Realty Group." />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1e3c72;
+      --accent: #2a5298;
+      --bg-light: #f9f9f9;
+      --text-dark: #333;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(30, 60, 114, 0.95);
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--white);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    header {
+      background: url('https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/mtn%20falls%20pond.jpg/:/rs=w:900,m') center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      position: relative;
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      z-index: 1;
+      padding: 0 1rem;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* GALLERY SECTION */
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 1rem;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* SEARCH BOX */
+    .search-box {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-box form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .search-box input,
+    .search-box select,
+    .search-box button {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .search-box button {
+      background-color: var(--primary);
+      color: var(--white);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .search-box button:hover {
+      background-color: #16325c;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .service {
+      background-color: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+    }
+
+    .service img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .service-info {
+      padding: 1rem;
+    }
+
+    .about {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .gallery img {
+        width: 200px;
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#gallery">Let's Move</a>
+    <a href="#search">Listings</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <header>
+    <h1>Marci Metzger Homes</h1>
+  </header>
+
+  <main>
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG/:/rs=w:984,h:655" alt="Views">
+
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655" alt="Views">
+
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG/:/rs=w:70,h:70,cg:true,m/cr=w:70,h:70,a:cc" alt="Views">
+
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG/:/rs=w:70,h:70,cg:true,m/cr=w:70,h:70,a:cc" alt="Views">
+
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG/:/rs=w:70,h:70,cg:true,m/cr=w:70,h:70,a:cc" alt="Views">
+
+
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-53.jpg-SMALL.JPG/:/rs=w:70,h:70,cg:true,m/cr=w:70,h:70,a:cc" alt="Views">
+                
+      </div>
+    </section>
+
+    <section id="search" class="search-box">
+      <h2>Find Your Dream Home</h2>
+      <form>
+        <input type="text" placeholder="Location" />
+        <select><option>Type</option></select>
+        <select><option>Sort By</option></select>
+        <select><option>Bedrooms</option><option>Any Number</option></select>
+        <select><option>Baths</option><option>Any Number</option></select>
+        <input type="text" placeholder="Min Price" />
+        <input type="text" placeholder="Max Price" />
+        <button type="submit">Search Now</button>
+      </form>
+    </section>
+
+    <section id="services">
+      <h2>Get It Sold</h2>
+      <div class="services">
+        <div class="service">
+          <img src="RealEstate.jpg" alt="Real Estate Done Right">
+          <div class="service-info">
+            <h3>Real Estate Done Right</h3>
+            <p>Buying, selling, investing — we make sure you have the best experience possible.</p>
+          </div>
+        </div>
+        <div class="service">
+          <img src="Commercial.jpg" alt="Commercial & Residential">
+          <div class="service-info">
+            <h3>Commercial & Residential</h3>
+            <p>Fixer-uppers? Luxury? We know this market and can help you find what you need.</p>
+          </div>
+        </div>
+        <div class="service">
+          <img src="Team.png" alt="Expertise">
+          <div class="service-info">
+            <h3>Rely on Expertise</h3>
+            <p>We connect you with trusted professionals to help answer questions and guide you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Marci Metzger</h2>
+      <p>With years of experience in the Pahrump real estate market, Marci Metzger and The Ridge Realty Group are committed to helping you find your perfect home. Our personalized service and local expertise ensure a smooth and enjoyable experience.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Marci Metzger Homes. All rights reserved.
+     BY VICTOR CASTRO JR.
+  </footer>
+</body>
+</html>
